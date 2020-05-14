@@ -1,0 +1,547 @@
+html{
+    scroll-behavior: smooth;
+  }
+body {
+	font-family: 'Times New Roman', sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+    color: #999999;
+    background-color: #010101;
+	-webkit-font-smoothing: antialiased;
+}
+/*---Main Wrapper---*/
+.prt_main_wrapper{
+	position:relative;
+	overflow-x:hidden;
+}
+.prt_main_wrapper::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #666666;
+}
+.prt_main_wrapper::-webkit-scrollbar{
+	width: 0.1px;
+	background-color: #F5F5F5;
+}
+.prt_main_wrapper::-webkit-scrollbar-thumb{
+	background-color: #000000;
+}
+.prt_home_wrapper{
+	position:relative;
+	overflow-y:auto;
+    padding: 20px 0px;
+}
+.prt_logo_wrapper img{
+    width:80px;
+    height:50px;
+    position: fixed;
+    left: 0;
+    top: 15px;
+    z-index: 2;
+  -webkit-animation: rotate 2s linear infinite;
+  -moz-animation: rotate 2s linear infinite;
+  -o-animation: rotate 2s linear infinite;
+  -ms-animation: rotate 2s linear infinite;
+  animation: rotate 2s linear infinite;
+}
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotatey(360deg);
+  }
+}
+@-moz-keyframes rotate {
+  100% {
+    -moz-transform: rotatey(360deg);
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotatey(360deg);
+  }
+}
+/*---------- Preloader Css Start -------*/
+#preloader {
+	background-color: #010101;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 2147483647;
+	width: 100%;
+	height: 100%;
+}
+#status {
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+/*--contact--*/
+.prt_contact_wrapper .prt_close_wrapper>a>img{
+    float: right;
+    width:130px;
+    height: 90px;
+    border: #999999;
+    border-radius: 30%;
+}
+
+.prt_contact_info{
+	display:inline-block;
+	margin-bottom:50px;
+	width:100%;
+}
+.prt_contact_info h1{
+	font-size:30px;
+	display:inline-block;
+	margin:0px 0px 35px 0px;
+	text-transform:uppercase;
+}
+.prt_contact_form{
+	display:inline-block;
+	width:100%;
+}
+.prt_contact_form input, .prt_contact_form textarea{
+	width:100%;
+	display:inline-block;
+	margin-bottom:30px;
+	border:0px;
+	background-color:#111111;
+	padding:0px 15px;
+	height:50px;
+	line-height:50px;
+	color:#ffffff;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.prt_contact_form input:hover, .prt_contact_form input:focus, .prt_contact_form textarea:hover, .prt_contact_form textarea:focus{
+	background-color:rgba(255, 255, 255, 0.2);
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.prt_contact_form textarea{
+	height:auto;
+	resize:vertical;
+}
+.prt_contact_form .prt_btn{
+	margin-top:0px;
+}
+.prt_contact_map{
+	display:inline-block;
+	width:100%;
+	margin-bottom:50px;
+}
+.prt_contact_map iframe{
+	display:inline-block;
+	width:100%;
+	height:513px;
+	border:0px;
+}
+.prt_contact_details{
+	display:inline-block;
+	width:100%;
+}
+.prt_contact_details_box{
+    padding:80px 0px;
+    border: 1px solid #999999;
+    border-radius: 5% 15%;
+	text-align:center;
+	position:relative;
+	z-index:1;
+	margin-top:50px;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.prt_contact_details_box:hover{
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+	-webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    font-size:larger;
+}
+.prt_contact_details_box:after{
+	content:"";
+	position:absolute;
+	background-color:rgba(0, 0, 0, 0.85);
+	top:0px;
+	left:0px;
+	bottom:0px;
+	right:0px;
+	z-index:-1;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.prt_contact_details_box:hover:after{
+	background-color:rgba(0, 0, 0, 0.75);
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.prt_contact_details_box h3{
+	font-size:24px;
+	margin-top:0px;
+	margin-bottom:20px;
+    text-transform:capitalize;
+    text-decoration: underline;    
+}
+.prt_contact_details_box p{
+	margin:0px;
+}
+.prt_contact_details_box p a{
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.prt_contact_details_box p a:hover{
+	color:#f6483b;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.prt_contact_details_box.details_box1{
+	background-image:url(../images/content/dtl_box1.jpg);
+}
+.prt_contact_details_box.details_box2{
+	background-image:url(../images/content/dtl_box2.jpg);
+}
+.prt_contact_details_box.details_box3{
+	background-image:url(../images/content/dtl_box3.jpg);
+}
+/*--footer--*/
+.prt_footer_wrapper{
+	background-color:#0a0a0a;
+	margin-top:115px;
+}
+.prt_footer_wrapper .social_links {
+    margin-top: 47px;
+  }
+  
+  @media (max-width: 767px) {
+    /* line 168, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+    .prt_footer_wrapper .social_links {
+      margin-top: 10px;
+      margin-bottom: 10px;
+   
+    }
+  }
+  
+  /* line 174, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+  .prt_footer_wrapper .social_links>ul>li{
+      float:center;
+      left:30%;
+  }
+  .prt_footer_wrapper .social_links ul li {
+    display: inline-block;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  
+  /* line 177, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+  .prt_footer_wrapper .social_links ul li a {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    text-align: center;
+    background: transparent;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    line-height: 40px !important;
+    margin-right: 45px;
+    color: #f6483b !important;
+    line-height: 40px !important;
+    background: transparent;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    border: 1px solid #f6483b;
+    padding-top: 10%;
+    font-size:24px;
+
+  }
+  
+  /* line 193, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+  .prt_footer_wrapper .social_links ul li a i {
+    font-size: 15px;
+    line-height: 40px;
+    position: relative;
+    top: -1px;
+  }
+  
+  /* line 201, ../../Arafath/CL/December/235. Job board/HTML/scss/_footer.scss */
+  .prt_footer_wrapper .social_links ul li:hover a {
+    color: #fff !important;
+    background: #f6483b;
+    border-color: transparent;
+    border: 1px solid #f6483b;
+  } 
+ 
+.prt_toppadder30{
+	padding-top:30px;
+}
+/*heading--*/
+/*--headings--*/
+.prt_heading_wrapper{
+	text-align:center;
+}
+.prt_heading{
+	margin-bottom:50px;
+    display: inline-block;
+	position:relative;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.prt_heading h1{
+	font-size:40px;
+	margin:0px;
+	text-transform:uppercase;
+	position:relative;
+	width:auto;
+	font-weight:500;
+	padding-bottom:15px;
+}
+.prt_heading h1:after{
+	content:"";
+	position:absolute;
+	background-color:#ffffff;
+	width:100%;
+	height:2px;
+	top:100%;
+	left:0;
+}
+.prt_heading p{
+    text-align: right;
+    width: auto;
+    text-transform: uppercase;
+    background-color: #010101;
+    margin: 0px;
+    padding-left: 10px;
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+	color:#f6483b;
+    font-weight: 500;
+}
+.prt_heading_wrapper_2{
+	text-align:left;
+}
+.prt_heading_wrapper_2 .prt_heading{
+	margin-bottom:30px;
+}
+/*--button--*/
+.prt_btn{
+    height: 50px;
+    line-height: 50px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 0px;
+    padding: 0 20px;
+	min-width:140px;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+	text-align:center;
+	text-transform:capitalize;
+	background-color:#f6483b;
+	border:1px solid #f6483b;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.prt_btn:hover, .prt_btn:focus{
+    color: #f6483b;
+    background-color: #111111;
+	border:1px solid #f6483b;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+@media (max-width: 479px) {
+    .prt_heading_wrapper .prt_heading>h1 {
+        font-size: 28px;
+    }
+    .prt_about_learnbox_year {
+        display: table-caption;
+        width: 100%;
+        vertical-align: middle;
+        padding-top: 0px;
+    }
+    .prt_footer_wrapper .social_links ul li a {
+        font-size:20px;
+        width:40px;
+        height:40px;
+        padding-top:5%;
+    }
+    .prt_about_learnbox_info {
+        width: 100%;
+    }
+    .prt_about_experience_year {
+        display: inline-block;
+        width: 100%;
+    }
+    .prt_about_experience_year h4 {
+        margin-bottom: 50px;
+        text-align: left;
+    }
+    .prt_about_experience_info {
+        display: inline-block;
+        width: 100%;
+        padding-left: 0px;
+    }
+    .prt_footer_wrapper .social_links>ul>li>a{
+        margin-right: 3px;
+    }
+    .prt_about_learnbox_right:after {
+        display:none;
+    }
+    .prt_about_learnbox_left:after {
+        display:none;
+    }
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+        .prt_counter_box {
+            padding-left: 50px;
+        }
+        
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+        .prt_profile_slider {
+            padding-top: 0px;
+            margin-bottom: 50px;
+        }
+        .prt_counter_box {
+            padding-left: 0px;
+        }
+        
+
+        }
+        @media (max-width: 767px) {
+        .prt_home_wrapper h1 {
+            font-size: 90px;
+            margin:0px;
+            text-align: center;
+        }
+        
+        .prt_footer_wrapper p {
+            width: 100%;
+            text-align: center;
+            margin: 0px 0px 20px 0px;
+        }
+        .prt_footer_wrapper ul {
+            width: 100%;
+            text-align: center;
+        }
+
+        }
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 100px;
+            border-radius: 50%;
+          }
+          
+          /* The popup chat - hidden by default */
+          .chat-popup {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+          }
+          
+          /* Add styles to the form container */
+          .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color:#001D38;
+            
+          }
+          
+          /* Full-width textarea */
+          .form-container textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+            resize: none;
+            min-height: 200px;
+            color:black;
+          }
+          
+          /* When the textarea gets focus, do something */
+          .form-container textarea:focus {
+            background-color: #ddd;
+            outline: none;
+          }
+          
+          /* Set a style for the submit/send button */
+          .form-container .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom:10px;
+            opacity: 0.8;
+          }
+          
+          /* Add a red background color to the cancel button */
+          .form-container .cancel {
+            background-color: red;
+          }
+          
+          /* Add some hover effects to buttons */
+          .form-container .btn:hover, .open-button:hover {
+            opacity: 1;
+          }
